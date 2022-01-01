@@ -58,19 +58,18 @@ function jingshu(b1, b2) {
         el2 = b2.el;
 
     b1.on('up', () => {
-        let data = jing.getS(active_g(el1), active_g(el2))
-
-        inner(data.content)
+        let data = jing.getS(active_g(el1), active_g(el2));
+        inner(data.content);
     })
 
     b2.on('up', () => {
-        let data = jing.getS(active_g(el1), active_g(el2))
-        inner(data.content)
+        let data = jing.getS(active_g(el1), active_g(el2));
+        inner(data.content);
     })
 }
 
 function inner(d) {
-    ci.innerHTML = d.replace(/\n/g, '<br><br>')
+    ci.innerHTML = '<div>'+d.replace(/\n/g, '<br><br>')+'</div>';
 }
 
 function active_g(el) {

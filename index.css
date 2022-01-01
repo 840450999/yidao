@@ -77,5 +77,17 @@ body {
     height: 100vh;
     background: url(./img/bg.png), url(./bg.png), var(--ybg-color);
     color: var(--a-color);
-    overflow: auto;
+    overflow: auto;    
+}
+#ci *{
+    animation: 1s ci;
+}
+
+@keyframes ci{
+    0%{
+        color: rgba(0,0,0,0);
+    }
+    100%{
+        color: var(--a-color);
+    }
 }
