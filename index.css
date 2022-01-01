@@ -1,0 +1,81 @@
+:root {
+    --b-color: rgba(255, 255, 255, 1);
+    --a-color: black;
+    --bg-color: black;
+    --ybg-color: rgb(181, 146, 83);
+}
+
+body {
+    color: var(--b-color);
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background: var(--bg-color);
+}
+
+#app {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    left: calc(50vw - 200px - 2rem - 250px);
+    top: calc(50vh - 200px - 2rem);
+    transform: rotate(180deg);
+}
+
+.g {
+    display: inline-block;
+    text-align: center;
+}
+
+.g-content {
+    transition: 1s all;
+}
+
+.y0 {
+    pointer-events: none;
+    width: 2rem;
+    height: 0.2rem;
+    background: linear-gradient(90deg, var(--b-color) 40%, transparent 40%, transparent 60%, var(--b-color) 63%);
+    margin-top: 4px;
+}
+
+.y1 {
+    pointer-events: none;
+    width: 2rem;
+    height: 0.2rem;
+    background: var(--b-color);
+    margin-top: 4px;
+}
+
+.y01 {
+    /* padding:10px 0; */
+}
+
+.y01 * {
+    position: absolute;
+}
+
+.y01 .y1 {
+    animation: y01 2s alternate infinite;
+}
+
+@keyframes y01 {
+    100% {
+        opacity: 0;
+    }
+}
+
+#ci {
+    font-family: "Reggae One", cursive;
+    font-weight: 600;
+    text-indent: 2rem;
+    padding-left: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 500px;
+    height: 100vh;
+    background: url(./img/bg.png), url(./bg.png), var(--ybg-color);
+    color: var(--a-color);
+    overflow: auto;
+}
