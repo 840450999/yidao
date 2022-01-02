@@ -5,7 +5,7 @@ import rotate from './rotateEvent.js';
 
 const y0 = '<div class="y0"></div>',
     y1 = '<div class="y1"></div>',
-    inter = '-99px'
+    inter = document.documentElement.clientWidth < 1000 ? '-64px' : '-99px'
 
 let app = document.querySelector('#app'),
     ci = document.querySelector('#ci'),
@@ -69,7 +69,7 @@ function jingshu(b1, b2) {
 }
 
 function inner(d) {
-    ci.innerHTML = '<div>'+d.replace(/\n/g, '<br><br>')+'</div>';
+    ci.innerHTML = '<div>' + d.replace(/\n/g, '<br><br>') + '</div>';
 }
 
 function active_g(el) {

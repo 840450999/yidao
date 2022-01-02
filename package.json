@@ -1,13 +1,13 @@
 {
   "name": "yidao",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "https://github.com/840450999/yidao.git",
-  "keywords": ["yidao","yijing"],
+  "keywords": ["yidao","yijing","bagua"],
   "author": "qyl",
   "license": "ISC"
 }
