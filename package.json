@@ -1,7 +1,7 @@
 {
   "name": "yidao",
-  "version": "1.0.4",
-  "description": "",
+  "version": "1.0.5",
+  "description": "yijing",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
