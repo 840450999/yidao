@@ -48,7 +48,7 @@ function s(g) {
     let d = document.createElement('div');
     d.classList.add('g');
     d.dataset.g = g;
-    d.innerHTML = g.split('').map(y => y == '0' ? y0 : y1).join('');
+    d.innerHTML = g.split('').reverse().map(y => y == '0' ? y0 : y1).join('');
     g.length == 3 && (d.innerHTML += y.BaGua[parseInt(g, 2)]);
     return d;
 }
