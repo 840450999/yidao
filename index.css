@@ -125,3 +125,47 @@ body {
         color: var(--a-color);
     }
 }
+
+
+
+.taiji {        
+    position: relative;    
+    transform: scale(0.1);
+    
+    transform-origin: 0 0;
+    border-radius: 50%;
+    width: 0px;
+    height: 300px;
+    border-left: 150px solid black;
+    border-right: 150px solid #ffffff;
+    background: radial-gradient(black, #ffffff);    
+    transition: all 12s;
+}
+
+.taiji::after {
+    content: " ";
+    position: absolute;
+    margin-left: -75px;
+    margin-top: 150px;
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+    border: 50px solid #ffffff;                    
+    background: black;
+    
+    /* box-shadow: 0px 0px 40px 40px  inset black; */
+    /* position: relative; */
+}
+
+.taiji::before {
+    content: " ";
+    position: absolute;
+    display: inline-block;
+    left: -75px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ffffff;            
+    border: 50px solid black;            
+    transition: 2s all;
+}

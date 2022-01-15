@@ -5,7 +5,7 @@ import rotate from './rotateEvent.js';
 
 const y0 = '<div class="y0"></div>',
     y1 = '<div class="y1"></div>',
-    inter = document.documentElement.clientWidth < 1000 ? '-64px' : '-99px'
+    inter = document.documentElement.clientWidth < 1000 ? '-99px' : '-99px'
 
 let app = document.querySelector('#app'),
     ci = document.querySelector('#ci'),
@@ -19,13 +19,15 @@ let sixiang = y.sixiang.map(y => s(y)),
 
 
 let b1 = fw(BF, bagua, inter.replace(/\d+/, num => num * 1.2))
-let b2 = fw(BF, bagua2, inter.replace(/\d+/, num => num * 2.5))
+let b2 = fw(BF, bagua2, inter.replace(/\d+/, num => num * 2))
 fw(y._FangWei(y.sixiang), sixiang, inter.replace(/\d+/, num => num / 2))
 
 jingshu(rotate(b1), rotate(b2))
 inner(jing.getS('111', '111').content)
 
-
+let tj_box = vessel()
+tj_box.innerHTML ='<div style="transform:translate(-1rem, -1rem)"><div class="taiji"></div></div>'
+app.appendChild(tj_box);
 
 function fw(y_FangWei, els, inter) {
     let div = vessel();
