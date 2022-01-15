@@ -5,7 +5,7 @@ import rotate from './rotateEvent.js';
 
 const y0 = '<div class="y0"></div>',
     y1 = '<div class="y1"></div>',
-    inter = document.documentElement.clientWidth < 1000 ? '-99px' : '-99px'
+    inter = document.documentElement.clientWidth < 1000 ? '-81px' : '-99px'
 
 let app = document.querySelector('#app'),
     ci = document.querySelector('#ci'),
