@@ -7,7 +7,19 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "https://github.com/840450999/yidao.git",
-  "keywords": ["yidao","yijing","bagua"],
+  "keywords": [
+    "yidao",
+    "yijing",
+    "bagua"
+  ],
   "author": "qyl",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
+    "@babel/register": "^7.16.9",
+    "babel-loader": "^8.2.3",
+    "babel-preset-env": "^1.7.0"
+  }
 }
