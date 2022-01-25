@@ -1,173 +1,169 @@
 :root {
-    --b-color: rgba(255, 255, 255, 1);
-    --a-color: black;
-    --bg-color: black;
-    --ybg-color: rgb(181, 146, 83);
-    --yao-width: 2rem;
-    --yao-height: 0.2rem;
+  --b-color: black;
+  --a-color: black;
+  --bg-color: #b59253;
+  --ybg-color: #b59253;
+  --yao-width: 2rem;
+  --yao-height: 0.2rem;
 }
 
 body {
-    color: var(--b-color);
-    padding: 0;
-    margin: 0;
-    height: 100vh;
-    background: var(--bg-color);
-    overflow-x: hidden;
+  font-family: "Reggae One", cursive;
+  font-weight: 600;
+  color: var(--b-color);
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+   /* background: var(--bg-color); */
+  background: url(./bg.png), url(./bg.png), var(--ybg-color); 
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 1000px) {
-    .BaGua-content {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        height: 64vh;
-    }
-
-    .Ci-content {
-        width: 100%;
-    }
+  .BaGua-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 64vh;
+  }
+  .Ci-content {
+    width: 100%;
+  }
 }
 
-
 @media screen and (min-width: 1000px) {
-    #app {
-        position: relative;
-        width: 30vw;
-        height: 30vw;
-        left: calc(50vw - 200px - 2rem - 250px);
-        top: calc(50vh - 200px - 2rem);
-    }
-
-    .BaGua-content {
-        width: calc(100vw - 500px);
-    }
-
-    .Ci-content {
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 500px;
-        height: 100vh;
-    }
+  #app {
+    position: relative;
+    width: 30vw;
+    height: 30vw;
+    left: calc(50vw - 200px - 2rem - 250px);
+    top: calc(50vh - 200px - 2rem);
+  }
+  .BaGua-content {
+    width: calc(100vw - 500px);
+  }
+  .Ci-content {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 500px;
+    height: 100vh;
+  }
 }
 
 .Ci-content {
-    padding-left: 10px;
-    background: url(./img/bg.png), url(./bg.png), var(--ybg-color);
+  padding-left: 10px;
+  background: url(./bg.png), url(./bg.png), var(--ybg-color);
 }
 
 #app {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
+  line-height: 1.7rem;
 }
 
 .g {
-    display: inline-block;
-    text-align: center;
+  display: inline-block;
+  text-align: center;
 }
 
 .g-content {
-    transition: 1s all;
+  transition: 1s all;
 }
 
 .y0 {
-    pointer-events: none;
-    width: var(--yao-width);
-    height: var(--yao-height);
-    background: linear-gradient(90deg, var(--b-color) 40%, transparent 40%, transparent 60%, var(--b-color) 63%);
-    margin-top: 4px;
+  filter: drop-shadow(0px 0px 21px);
+  pointer-events: none;
+  width: var(--yao-width);
+  height: var(--yao-height);
+  background: linear-gradient(90deg, var(--b-color) 40%, transparent 40%, transparent 60%, var(--b-color) 63%);
+  margin-top: 4px;
 }
 
 .y1 {
-    pointer-events: none;
-    width: var(--yao-width);
-    height: var(--yao-height);
-    background: var(--b-color);
-    margin-top: 4px;
+  filter: drop-shadow(0px 0px 21px);
+  pointer-events: none;
+  width: var(--yao-width);
+  height: var(--yao-height);
+  background: var(--b-color);
+  margin-top: 4px;
 }
 
 .y01 {
-    /* padding:10px 0; */
+  /* padding:10px 0; */
 }
 
 .y01 * {
-    position: absolute;
+  position: absolute;
 }
 
 .y01 .y1 {
-    animation: y01 2s alternate infinite;
+  animation: y01 2s alternate infinite;
 }
 
 @keyframes y01 {
-    100% {
-        opacity: 0;
-    }
+  100% {
+    opacity: 0;
+  }
 }
 
 #ci {
-    font-family: "Reggae One", cursive;
-    font-weight: 600;
-    text-indent: 2rem;
-    color: var(--a-color);
-    height: 100%;
-    overflow: auto;
+  font-family: "Reggae One", cursive;
+  font-weight: 600;
+  text-indent: 2rem;
+  color: var(--a-color);
+  height: 100%;
+  overflow: auto;
 }
 
 #ci * {
-    animation: 1s ci;
+  animation: 1s ci;
 }
 
 @keyframes ci {
-    0% {
-        color: rgba(0, 0, 0, 0);
-    }
-
-    100% {
-        color: var(--a-color);
-    }
+  0% {
+    color: transparent;
+  }
+  100% {
+    color: var(--a-color);
+  }
 }
-
-
 
 .taiji {
-    position: relative;
-    transform: scale(0.1);
-    transform-origin: 0 0;
-    border-radius: 50%;
-    width: 0px;
-    height: 300px;
-    border-left: 150px solid black;
-    border-right: 150px solid #ffffff;
-    background: radial-gradient(black, #ffffff);
-    transition: all 12s;
-    
+  position: relative;
+  transform: scale(0.1);
+  transform-origin: 0 0;
+  border-radius: 50%;
+  width: 0px;
+  height: 300px;
+  border-left: 150px solid black;
+  border-right: 150px solid #ffffff;
+  background: radial-gradient(black, #ffffff);
+  /* transition: all 12s; */
 }
 
-
 .taiji::after {
-    content: " ";
-    position: absolute;
-    margin-left: -75px;
-    margin-top: 150px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 50px solid #ffffff;
-    background: black;
-
-    /* box-shadow: 0px 0px 40px 40px  inset black; */
-    /* position: relative; */
+  content: " ";
+  position: absolute;
+  margin-left: -75px;
+  margin-top: 150px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 50px solid #ffffff;
+  background: black;
+  /* box-shadow: 0px 0px 40px 40px  inset black; */
+  /* position: relative; */
 }
 
 .taiji::before {
-    content: " ";
-    position: absolute;
-    display: inline-block;
-    left: -75px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: #ffffff;
-    border: 50px solid black;
-    transition: 2s all;
+  content: " ";
+  position: absolute;
+  display: inline-block;
+  left: -75px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 50px solid black;
+  /* transition: 2s all; */
 }

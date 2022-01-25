@@ -2,6 +2,8 @@ import data from './data.js';
 import Y from './y.js';
 import Jing from './jing.js';
 import rotate from './rotateEvent.js';
+// import css from './index.css'
+import('./index.css');
 
 const y0 = '<div class="y0"></div>',
     y1 = '<div class="y1"></div>',

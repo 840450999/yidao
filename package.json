@@ -20,6 +20,13 @@
     "@babel/preset-env": "^7.16.8",
     "@babel/register": "^7.16.9",
     "babel-loader": "^8.2.3",
-    "babel-preset-env": "^1.7.0"
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^6.5.1",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.2.6"
+  },
+  "dependencies": {
+    "file-loader": "^6.2.0",
+    "postcss-loader": "^6.2.1"
   }
 }

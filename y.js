@@ -2,7 +2,7 @@ class y {
     constructor() {
         this.yin = '0';
         this.yang = '1';
-        this.TaiJi = ['0', '1']
+        this.TaiJi = ['0', '1'];
         this.YinYang = ['阴', '阳'];
         this.SiXiang = ['老阴', '少阳', '少阴', '老阳'];
         this.BaGua = ["坤", "艮", "坎", "巽", "震", "离", "兑", "乾"];
@@ -20,12 +20,12 @@ class y {
     }
 
     _BaGua() {
-        return this._YanHua(this._YanHua(this.TaiJi))
+        return this._YanHua(this._YanHua(this.TaiJi));
     }
 
     _YiJing() {
-        let ret = this._BaGua()
-        for (let i = 4; i > 1; i--) ret = this._YanHua(ret)
+        let ret = this._BaGua();
+        for (let i = 4; i > 1; i--) ret = this._YanHua(ret);
         return ret;
     }
 
