@@ -18,7 +18,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /js$/,
+        test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
         options: {
@@ -32,7 +32,7 @@ module.exports = {
             loader: "style-loader",
             // options: { injectType: "linkTag" }
           },
-          // { loader: "file-loader" },
+          { loader: "file-loader" },
           {loader:"css-loader"}
         ]
       },

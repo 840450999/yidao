@@ -1,18 +1,18 @@
-import data from './data.js';
 import Y from './y.js';
 import Jing from './jing.js';
 import rotate from './rotateEvent.js';
 // import css from './index.css'
+import xici from './xici.js'
 import('./index.css');
-
 const y0 = '<div class="y0"></div>',
-    y1 = '<div class="y1"></div>',
-    inter = document.documentElement.clientWidth < 1000 ? '-81px' : '-99px'
+y1 = '<div class="y1"></div>',
+inter = document.documentElement.clientWidth < 1000 ? '-81px' : '-99px'
 
 let app = document.querySelector('#app'),
-    ci = document.querySelector('#ci'),
-    y = new Y(),
-    jing = new Jing();
+ci = document.querySelector('#ci'),
+y = new Y(),
+jing = new Jing();
+xici(ci);
 
 let sixiang = y.sixiang.map(y => s(y)),
     bagua = y.bagua.map(y => s(y)),
@@ -80,3 +80,4 @@ function active_g(el) {
     let i = -(el.style.transform.replace(/.*?(\d+)deg.*/, '$1') % 360 - 180);
     return y.bagua[BF.indexOf(i)]
 }
+

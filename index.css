@@ -13,13 +13,13 @@ body {
   color: var(--b-color);
   padding: 0;
   margin: 0;
-  height: 100vh;
+  height: 100vh;  
    /* background: var(--bg-color); */
   background: url(./bg.png), url(./bg.png), var(--ybg-color); 
   overflow-x: hidden;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) {  
   .BaGua-content {
     display: flex;
     justify-content: center;
@@ -32,21 +32,25 @@ body {
 }
 
 @media screen and (min-width: 1000px) {
+  body{
+    font-size: 1.3rem;
+  }
+
   #app {
     position: relative;
     width: 30vw;
     height: 30vw;
-    left: calc(50vw - 200px - 2rem - 250px);
-    top: calc(50vh - 200px - 2rem);
+    left: calc(50vw - 200px - 2rem - 350px);
+    top: calc(50vh - 200px - 2rem - 60px);
   }
   .BaGua-content {
-    width: calc(100vw - 500px);
+    width: calc(100vw - 700px);
   }
   .Ci-content {
     position: absolute;
     right: 0;
     top: 0;
-    width: 500px;
+    width: 700px;
     height: 100vh;
   }
 }
