@@ -32,7 +32,7 @@ module.exports = {
             loader: "style-loader",
             // options: { injectType: "linkTag" }
           },
-          { loader: "file-loader" },
+          // { loader: "file-loader" },
           {loader:"css-loader"}
         ]
       },
