@@ -13,26 +13,28 @@ body {
   color: var(--b-color);
   padding: 0;
   margin: 0;
-  height: 100vh;  
-   /* background: var(--bg-color); */
-  background: url(./bg.png), url(./bg.png), var(--ybg-color); 
+  height: 100vh;
+  /* background: var(--bg-color); */
+  background: url(./bg.png), url(./bg.png), var(--ybg-color);
   overflow-x: hidden;
 }
 
-@media screen and (max-width: 1000px) {  
+@media screen and (max-width: 1000px) {
   .BaGua-content {
     display: flex;
     justify-content: center;
     width: 100%;
     height: 64vh;
+    transform: scale(.9);
   }
+
   .Ci-content {
     width: 100%;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  body{
+  body {
     font-size: 1.3rem;
   }
 
@@ -43,9 +45,11 @@ body {
     left: calc(50vw - 200px - 2rem - 350px);
     top: calc(50vh - 200px - 2rem - 60px);
   }
+
   .BaGua-content {
     width: calc(100vw - 700px);
   }
+
   .Ci-content {
     position: absolute;
     right: 0;
@@ -58,6 +62,21 @@ body {
 .Ci-content {
   padding-left: 10px;
   background: url(./bg.png), url(./bg.png), var(--ybg-color);
+}
+
+.Ci-content *::-webkit-scrollbar {  
+  width: 10px;  
+  height: 1px;
+}
+
+.Ci-content *::-webkit-scrollbar-thumb {  
+  border-radius: 10px;  
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.Ci-content *::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: transparent;
 }
 
 #app {
@@ -74,7 +93,7 @@ body {
   transition: 1s all;
 }
 
-.y0 {  
+.y0 {
   pointer-events: none;
   width: var(--yao-width);
   height: var(--yao-height);
@@ -82,7 +101,7 @@ body {
   margin-top: 4px;
 }
 
-.y1 {  
+.y1 {
   pointer-events: none;
   width: var(--yao-width);
   height: var(--yao-height);
@@ -125,6 +144,7 @@ body {
   0% {
     color: transparent;
   }
+
   100% {
     color: var(--a-color);
   }

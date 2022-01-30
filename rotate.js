@@ -29,7 +29,7 @@ class rotate extends event {
             dre = x - ox > 0 ? 1 : -1,
             j = ~~sqrt(pow(abs(x - ox), 2) + pow(abs(y - oy), 2)) + 1,
             l = (~~(j / 2 / 45)) * 45 * dre
-
+   
         this.rot(l)
     })
 

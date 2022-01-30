@@ -3,32 +3,41 @@ import Jing from './jing.js';
 import rotate from './rotateEvent.js';
 // import css from './index.css'
 import xici from './xici.js'
+
 import('./index.css');
+
 const y0 = '<div class="y0"></div>',
-y1 = '<div class="y1"></div>',
-inter = document.documentElement.clientWidth < 1000 ? '-81px' : '-99px'
+    y1 = '<div class="y1"></div>',
+    inter = document.documentElement.clientWidth < 1000 ? '-81px' : '-99px'
 
 let app = document.querySelector('#app'),
-ci = document.querySelector('#ci'),
-y = new Y(),
-jing = new Jing();
+    ci = document.querySelector('#ci'),
+    y = new Y(),
+    jing = new Jing();
 xici(ci);
 
 let sixiang = y.sixiang.map(y => s(y)),
     bagua = y.bagua.map(y => s(y)),
     bagua2 = y.bagua.map(y => s(y)),
-    BF = y._FangWei(y.bagua)
+    BF = y._FangWei(y.bagua),
+    y64 = (new Array(3)).join('a').split('a').reduce((arr) => y._YanHua(arr), y.bagua)
+let y64FW = y._FangWei(y64);
 
+let y64C = fw(y64FW, y64.map(y => s(y)), inter.replace(/\d+/, num => num * 4.5))
+y64C.style.transform = y64C.style.transform + ' scale(.55)';
 
 let b1 = fw(BF, bagua, inter.replace(/\d+/, num => num * 1.2))
 let b2 = fw(BF, bagua2, inter.replace(/\d+/, num => num * 2))
 fw(y._FangWei(y.sixiang), sixiang, inter.replace(/\d+/, num => num / 2))
 
-jingshu(rotate(b1), rotate(b2))
+let r1 = rotate(b1)
+let r2 = rotate(b2)
+jingshu(r1, r2);
+
 inner(jing.getS('111', '111').content)
 
 let tj_box = vessel()
-tj_box.innerHTML ='<div style="transform:translate(-1rem, -1rem)"><div class="taiji"></div></div>'
+tj_box.innerHTML = '<div style="transform:translate(-1rem, -1rem)"><div class="taiji"></div></div>'
 app.appendChild(tj_box);
 
 function fw(y_FangWei, els, inter) {
@@ -63,11 +72,13 @@ function jingshu(b1, b2) {
 
     b1.on('up', () => {
         let data = jing.getS(active_g(el1), active_g(el2));
+        rot_y64(y64C, active_g(el1), active_g(el2))
         inner(data.content);
     })
 
     b2.on('up', () => {
         let data = jing.getS(active_g(el1), active_g(el2));
+        rot_y64(y64C, active_g(el1), active_g(el2))
         inner(data.content);
     })
 }
@@ -81,3 +92,14 @@ function active_g(el) {
     return y.bagua[BF.indexOf(i)]
 }
 
+function rot_y64(y64_el, x, s) {
+    let i = parseInt(x + s, 2)
+
+
+    if (y64_el.style.transform.indexOf('rotate') !== -1) {
+        y64_el.style.transform = y64_el.style.transform.replace(/rotate\(.*?\)/, `rotate(${180 - (y64FW[i])}deg)`)
+    }
+    else {
+        y64_el.style.transform = y64_el.style.transform + `rotate(${180 - (y64FW[i])}deg)`
+    }
+}
